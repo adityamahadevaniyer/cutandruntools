@@ -1,0 +1,78 @@
+{
+    "software_config": {
+
+        "_comment_on_comments":      "JSON doesn't allow comments, but we can add _comment fields." ,
+        "_comment_on_comments2":     "Blank lines are allowed, but multi_line comments are not." ,
+        "_comment_on_comments3":     "So we have to break them up like this, ugly as it is." ,
+
+       
+        "_comment_software":         "DO NOT CHANGE ANYTHING IN THIS BLOCK! These are paths inside the" ,
+        "_comment_software2":         "singularity container for software tools and needed files." ,
+
+        "Rscriptbin": "/usr/local/bin", 
+        "pythonbin": "/usr/local/bin", 
+        "perlbin": "/usr/local/bin",
+        "javabin": "/usr/bin",
+        "bowtie2bin": "/usr/local/bin", 
+        "samtoolsbin": "/usr/local/bin", 
+        "macs2bin": "/usr/local/bin", 
+        "memebin": "/usr/local/bin", 
+        "bedopsbin": "/usr/local/bin", 
+        "bedtoolsbin": "/usr/local/bin", 
+        "path_deeptools": "/usr/local/bin",
+        "path_parallel": "/usr/local/bin", 
+        "path_tabix": "/usr/local/bin",
+        "extratoolsbin": "/opt/CUT-RUNTools-2.0/install", 
+        "extrasettings": "/opt/CUT-RUNTools-2.0/install",
+        "kseqbin": "/opt/CUT-RUNTools-2.0/install", 
+        "adapterpath": "/opt/CUT-RUNTools-2.0/adapters", 
+        "trimmomaticbin": "/usr/local/bin", 
+        "picardbin": "/opt/picard/build/libs",
+        "picardjarfile": "picard.jar", 
+        "trimmomaticjarfile": "trimmomatic.jar", 
+        "makecutmatrixbin": "/usr/local/bin",
+
+
+        "_comment_user_data":        "DO CHANGE LINES IN THIS BLOCK! List the paths on your system to" ,
+        "_comment_user_data2":       "your reference files and bowtie2 indices." ,
+
+        "bt2idx": "/projects/baker-lab/genomes/mm10/bowtie2/mm10",
+        "genome_sequence": "/projects/baker-lab/genomes/mm10/mm10_genome.fa",
+        "spike_in_bt2idx": "/projects/researchit/USERS/kindln/cutrun/assemblies/ecoli/bt2idx/ecoli",
+        "spike_in_sequence": "/projects/researchit/USERS/kindln/cutrun/assemblies/ecoli/ecoli.fa"
+    }, 
+
+    "input_output": {
+
+        "_comment_directories":      "DO CHANGE THESE! Give your fastq and working directories." ,
+
+        "fastq_directory": "/projects/baker-lab/CutNTag/fastqs/CAST-KI",
+        "workdir": "/projects/baker-lab/CutNTag/cutruntools_test",
+
+
+        "_comment_parameters":       "Change these parameters as desired for your experiement." ,
+
+        "fastq_sequence_length": "76", 
+        "organism_build": "mm10",
+        "spike_in": "FALSE",
+        "spike_in_norm": "FALSE",
+        "spikein_scale": "10000",
+        "frag_120": "TRUE",
+        "peak_caller": "macs2",
+        "dup_peak_calling": "FALSE",
+        "cores": "8",
+        "experiment_type": "CUT&RUN"
+    }, 
+
+    "motif_finding": {
+
+        "_comment_motifs":           "Change these parameters as desired for your experiement." ,
+
+        "num_bp_from_summit": "100", 
+        "num_peaks": "1000", 
+        "total_peaks": "2000", 
+        "motif_scanning_pval": "0.0005", 
+        "num_motifs": "10"
+    }
+}
+
